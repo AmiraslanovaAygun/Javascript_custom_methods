@@ -105,6 +105,7 @@ function include(arr, checkedFunction) {
   for (let i = 0; i < arr.length; i++) {
     if (checkedFunction(arr[i])) {
       return true;
+      break;
     } else return false;
   }
 }
@@ -128,7 +129,7 @@ function sort(arr) {
       }
     }
     newArr.push(minElement);
-    let str = arr.splice(arr.indexOf(minElement), 1);
+    arr.splice(arr.indexOf(minElement), 1);
   }
 
   return newArr;
